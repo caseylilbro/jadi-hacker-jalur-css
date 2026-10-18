@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PUSpace</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .form-card {
+      position: relative;
+      width: 100%;
+      max-width: 540px;
+      margin-top: 5px;
+    }
+
+    .required-asterisk {
+      color: #1e293b;
+      font-weight: 700;
+    }
+
+    .date-input-container {
+      position: relative;
+      width: 100%;
+    }
+  </style>
+
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="navbar-container">
+      <a href="index.html" class="brand-logo" style="text-decoration: none;">
+        <span class="brand-pu">President University</span>
+        <span class="brand-text">Space</span>
+      </a>
+
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="rooms.html" class="nav-link">Rooms</a></li>
+          <li><a href="booking.html" class="nav-link active">Booking</a></li>
+          <li><a href="schedule.html" class="nav-link">Schedule</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+ 
+  <section class="page-banner">
+    <div class="banner-content">
+      <h1 class="banner-title">Form Booking Room</h1>
+      <p class="banner-subtitle">Column with * needs to be <b>filled</b>.</p>
+    </div>
+  </section>
+
+  <main class="main-wrapper">
+    <div class="form-card">
+      <form id="formBooking" action="#" method="POST">
+        
+        
+        <div class="form-group">
+          <label for="nama" class="form-label">
+            Full Name <span class="required-asterisk">*</span>
+          </label>
+          <input 
+            type="text" 
+            id="nama" 
+            name="nama" 
+            class="form-control" 
+            placeholder="Same as your Student ID Card" 
+            required>
+        </div>
+
+        <div class="form-group">
+          <label for="password" class="form-label">
+            Booking Password <span class="required-asterisk">*</span>
+          </label>
+          <input 
+            type="password" 
+            id="password" 
+            name="password" 
+            class="form-control" 
+            placeholder="Atleast 6 Characters" 
+            minlength="6"
+            required>
+          <p class="form-helper">Used for canceling or modifying the booking</p>
+        </div>
+
+        <div class="form-group">
+          <label for="ruangan" class="form-label">
+            Choose a Room <span class="required-asterisk">*</span>
+          </label>
+          <select id="ruangan" name="ruangan" class="form-control" required>
+            <option value="" disabled selected>Choose a Room</option>
+            <option value="B106">B106</option>
+            <option value="B103">B103</option>
+            <option value="PUCC Theater 1">PUCC Theater 1</option>
+            <option value="Lab A211">Lab A211</option>
+            <option value="Lab A209">Lab A209</option>
+            <option value="B104">B104</option>
+            <option value="B304">B304</option>
+            <option value="C202">C202</option>
+          </select>
+        </div>
+
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="tanggal" class="form-label">
+              Date <span class="required-asterisk">*</span>
+            </label>
+            <div class="date-input-container">
+              <input 
+                type="text" 
+                id="date" 
+                name="tanggal" 
+                class="form-control" 
+                value="18 / 10 / 2026" 
+                placeholder="DD / MM / YYYY"
+                required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="jam_mulai" class="form-label">
+              Start Time <span class="required-asterisk">*</span>
+            </label>
+            <select id="jam_mulai" name="jam_mulai" class="form-control" required>
+              <option value="07.00" selected>07.00</option>
+              <option value="09.30">09.30</option>
+              <option value="12.00">12.00</option>
+              <option value="13.00">13.00</option>
+              <option value="14.30">14.30</option>
+              <option value="16.30">16.30</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">
+            Activity Purpose <span class="required-asterisk">*</span>
+          </label>
+          <div class="options-inline">
+            <label class="radio-item">
+              <input type="radio" name="tujuan" id="tujuanKuliah" value="Makeup Class" checked required>
+              Makeup Class
+            </label>
+            <label class="radio-item">
+              <input type="radio" name="tujuan" id="tujuanDiskusi" value="Group Discussion">
+              Group Discussion
+            </label>
+            <label class="radio-item">
+              <input type="radio" name="tujuan" id="tujuanRapat" value="Organization Meeting">
+              Organization Meeting
+            </label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Facilities additional</label>
+          <div class="options-inline">
+            <label class="checkbox-item">
+              <input type="checkbox" name="fasilitas" id="fasilitasProyektor" value="Proyektor" checked>
+              Proyektor
+            </label>
+            <label class="checkbox-item">
+              <input type="checkbox" name="fasilitas" id="fasilitasSpidol" value="Spidol">
+              Spidol
+            </label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="keterangan" class="form-label">
+            Activity Description <span class="required-asterisk">*</span>
+          </label>
+          <textarea 
+            id="keterangan" 
+            name="keterangan" 
+            class="form-control" 
+            rows="3" 
+            placeholder="explain the purpose of using the room" 
+            required></textarea>
+        </div>
+
+        <div class="agreement-group">
+          <label class="agreement-item">
+            <input type="checkbox" id="persetujuan" name="persetujuan" required>
+            <span style="display: inline-block; vertical-align: middle;">
+              I agree to maintain the cleanliness and facilities of the room. <span class="required-asterisk">*</span>
+            </span>
+          </label>
+        </div>
+
+        <button type="submit" class="btn-submit" id="btnSubmit">
+          Send Request
+        </button>
+
+      </form>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <ul class="footer-nav">
+      <li><a href="index.html" class="footer-link">Home</a></li>
+      <li><a href="rooms.html" class="footer-link">Rooms</a></li>
+      <li><a href="booking.html" class="footer-link">Booking</a></li>
+      <li><a href="schedule.html" class="footer-link">Schedule</a></li>
+      <li><a href="contact.html" class="footer-link">Contact</a></li>
+    </ul>
+    <p class="footer-copyright">
+      &copy; 2026 PU Room Booking &middot; Web Programming Team Project
+    </p>
+  </footer>
+</body>
+</html>
