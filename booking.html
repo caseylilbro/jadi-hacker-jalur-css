@@ -52,12 +52,12 @@
   <section class="page-banner">
     <div class="banner-content">
       <h1 class="banner-title">Form Booking Room</h1>
-      <p class="banner-subtitle">Column with * needs to be <b>filled</b>.</p>
     </div>
   </section>
 
   <main class="main-wrapper">
     <div class="form-card">
+      <p class="required-notice"> Column with (*) needs to be <b>filled</b>. </p>
       <form id="formBooking" action="#" method="POST">
         
         
@@ -124,16 +124,16 @@
             </div>
           </div>
           <div class="form-group">
-            <label for="jam_mulai" class="form-label">
-              Start Time <span class="required-asterisk">*</span>
+            <label for="jam" class="form-label">
+              Time <span class="required-asterisk">*</span>
             </label>
-            <select id="jam_mulai" name="jam_mulai" class="form-control" required>
-              <option value="07.00" selected>07.00</option>
-              <option value="09.30">09.30</option>
-              <option value="12.00">12.00</option>
-              <option value="13.00">13.00</option>
-              <option value="14.30">14.30</option>
-              <option value="16.30">16.30</option>
+            <select id="jam" name="jam" class="form-control" required>
+              <option value="07.00 - 09.30" selected>07.00 - 09.30</option>
+              <option value="09.30 - 12.00">09.30 - 12.00</option>
+              <option value="12.00 - 13.00">12.00 - 13.00</option>
+              <option value="13.00 - 14.30">13.00 - 14.30</option>
+              <option value="14.30 - 16.30">14.30 - 16.30</option>
+              <option value="16.30 - 18.00">16.30 - 18.00</option>
             </select>
           </div>
         </div>
