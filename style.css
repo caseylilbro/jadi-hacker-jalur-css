@@ -251,8 +251,7 @@ body {
   text-decoration: none !important; /* [Text & Font Property: text-decoration] */
   display: inline-flex;
   align-items: center;
-  font-size: 1.25rem;
-  font-weight: 800;                 
+  font-size: 1.25rem;                
   border: none !important;
   outline: none !important;
 }
